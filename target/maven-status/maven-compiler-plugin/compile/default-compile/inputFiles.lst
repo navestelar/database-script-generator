@@ -1,3 +1,7 @@
 C:\Users\acche\programacao\bcc\poo2\projetos\database\src\main\java\com\database\Main.java
 C:\Users\acche\programacao\bcc\poo2\projetos\database\src\main\java\com\database\AppConfiguration.java
+C:\Users\acche\programacao\bcc\poo2\projetos\database\src\main\java\com\database\mysql\MySQLConnection.java
+C:\Users\acche\programacao\bcc\poo2\projetos\database\src\main\java\com\database\connection\ConnectionFactory.java
+C:\Users\acche\programacao\bcc\poo2\projetos\database\src\main\java\com\database\connection\DatabaseConnection.java
 C:\Users\acche\programacao\bcc\poo2\projetos\database\src\main\java\com\database\postgresql\PostgreSQLConnection.java
+C:\Users\acche\programacao\bcc\poo2\projetos\database\src\main\java\com\database\connection\DatabaseType.java

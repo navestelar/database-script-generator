@@ -1,13 +1,14 @@
 package com.database.postgresql;
 
 import com.database.AppConfiguration;
+import com.database.connection.DatabaseConnection;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
 import java.sql.Connection;
 import java.sql.SQLException;
 
-public class PostgreSQLConnection {
+public class PostgreSQLConnection implements DatabaseConnection {
 
     private static PostgreSQLConnection instance;
     private final HikariDataSource dataSource;
@@ -42,7 +43,7 @@ public class PostgreSQLConnection {
         return dataSource.getConnection();
     }
 
-    public static void closeDataSource() throws SQLException {
+    public void closeDataSource() throws SQLException {
         if (instance != null) {
             instance.dataSource.close();
         }

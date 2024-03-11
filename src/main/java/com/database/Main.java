@@ -1,10 +1,21 @@
 package com.database;
 
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import com.database.connection.ConnectionFactory;
+import com.database.connection.DatabaseConnection;
+import com.database.connection.DatabaseType;
+
 public class Main {
     public static void main(String[] args) {
-        AppConfiguration config = AppConfiguration.getInstance();
-        System.out.println("Database URL: " + config.getProperty("database.url"));
-        System.out.println("Database User: " + config.getProperty("database.user"));
-        System.out.println("Database Password: " + config.getProperty("database.password"));
+        try {
+            DatabaseConnection dbConnection = ConnectionFactory.setDatabaseConnection(DatabaseType.POSTGRESQL);
+            Connection connection = dbConnection.getConnection();
+            // Use the connection...
+            dbConnection.closeDataSource();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

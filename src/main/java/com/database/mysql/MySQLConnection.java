@@ -1,13 +1,14 @@
 package com.database.mysql;
 
 import com.database.AppConfiguration;
+import com.database.connection.DatabaseConnection;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
 import java.sql.Connection;
 import java.sql.SQLException;
 
-public class MySQLConnection {
+public class MySQLConnection implements DatabaseConnection {
 
     private static MySQLConnection instance;
     private final HikariDataSource dataSource;
@@ -42,7 +43,7 @@ public class MySQLConnection {
         return dataSource.getConnection();
     }
 
-    public static void closeDataSource() throws SQLException {
+    public void closeDataSource() throws SQLException {
         if (instance != null) {
             instance.dataSource.close();
         }

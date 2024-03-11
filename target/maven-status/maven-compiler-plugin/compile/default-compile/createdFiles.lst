@@ -1,3 +1,8 @@
-com\database\Main.class
 com\database\AppConfiguration.class
 com\database\postgresql\PostgreSQLConnection.class
+com\database\connection\ConnectionFactory$1.class
+com\database\Main.class
+com\database\mysql\MySQLConnection.class
+com\database\connection\DatabaseConnection.class
+com\database\connection\ConnectionFactory.class
+com\database\connection\DatabaseType.class
