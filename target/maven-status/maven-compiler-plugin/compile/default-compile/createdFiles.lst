@@ -1,0 +1,3 @@
+com\database\Main.class
+com\database\AppConfiguration.class
+com\database\postgresql\PostgreSQLConnection.class
